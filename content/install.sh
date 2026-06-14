@@ -1,8 +1,8 @@
 #!/bin/sh
 
 DIR_TMP="$(mktemp -d)"
-QBIT_VERSION="4.6.5.10"
-ARIANG_VERSION="1.3.7"
+QBIT_VERSION="5.2.1.10"
+ARIANG_VERSION="1.3.13"
 RCLONEWEB_VERSION="2.0.5"
 
 # Install AriaNg
@@ -40,8 +40,8 @@ mv ${DIR_TMP}/*/OliveTin /usr/bin/
 mkdir -p /var/www/olivetin
 mv ${DIR_TMP}/*/webui/* /var/www/olivetin/
 
-# Install Vuetorrent
-wget -qO - https://github.com/WDaan/VueTorrent/releases/latest/download/vuetorrent.zip | busybox unzip -qd /workdir -
+# Install Vuetorrent (repo moved: WDaan/VueTorrent -> VueTorrent/VueTorrent)
+wget -qO - https://github.com/VueTorrent/VueTorrent/releases/latest/download/vuetorrent.zip | busybox unzip -qd /workdir -
 
 # Install yt-dlp
 wget -qO /usr/bin/yt-dlp https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
