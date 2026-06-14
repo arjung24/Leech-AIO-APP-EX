@@ -1,4 +1,3 @@
-version: '2.3'
 services:
   allinone:
     image: ghcr.io/wy580477/leech-aio-app-ex:latest
